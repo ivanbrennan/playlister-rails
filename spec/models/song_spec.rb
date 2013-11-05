@@ -18,7 +18,7 @@ describe Song do
         song.artist = artist
         song.save
 
-        expect(song.artist.name).to eq("Michael Jackson")
+        expect(song.artist.name).to eq("Bob Dylan")
       end
 
     end

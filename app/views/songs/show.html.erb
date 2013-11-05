@@ -7,7 +7,7 @@
 
 <p>
   <strong>Artist Name:</strong>
-  <%= @song.artist_name%>
+  <%= @song.artist.name %>
 </p>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |

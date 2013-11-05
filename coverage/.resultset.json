@@ -1,18 +1,18 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/ivan/Development/flatiron/code/playlister-rails/app/controllers/artists_controller.rb": [
+      "/Users/ivan/Development/flatiron/code/playlister-lecture-rails/app/controllers/artists_controller.rb": [
         1,
         null
       ],
-      "/Users/ivan/Development/flatiron/code/playlister-rails/app/controllers/application_controller.rb": [
+      "/Users/ivan/Development/flatiron/code/playlister-lecture-rails/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/ivan/Development/flatiron/code/playlister-rails/app/controllers/songs_controller.rb": [
+      "/Users/ivan/Development/flatiron/code/playlister-lecture-rails/app/controllers/songs_controller.rb": [
         1,
         1,
         null,
@@ -88,12 +88,12 @@
         null,
         null
       ],
-      "/Users/ivan/Development/flatiron/code/playlister-rails/app/models/artist.rb": [
+      "/Users/ivan/Development/flatiron/code/playlister-lecture-rails/app/models/artist.rb": [
         1,
         1,
         null
       ],
-      "/Users/ivan/Development/flatiron/code/playlister-rails/app/models/song.rb": [
+      "/Users/ivan/Development/flatiron/code/playlister-lecture-rails/app/models/song.rb": [
         1,
         1,
         null,
@@ -103,6 +103,6 @@
         null
       ]
     },
-    "timestamp": 1383684059
+    "timestamp": 1383684686
   }
 }
