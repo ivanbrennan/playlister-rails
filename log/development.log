@@ -380,3 +380,77 @@ Started GET "/assets/songs.js?body=1" for 127.0.0.1 at 2013-11-05 16:01:34 -0500
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 16:01:34 -0500
+
+
+Started GET "/songs" for 127.0.0.1 at 2013-11-05 16:26:08 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.1ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered songs/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 108ms (Views: 87.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-05 16:26:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 16:26:09 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-05 16:26:09 -0500
+
+
+Started GET "/assets/songs.css?body=1" for 127.0.0.1 at 2013-11-05 16:26:09 -0500
+
+
+Started GET "/assets/artists.css?body=1" for 127.0.0.1 at 2013-11-05 16:26:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 16:26:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-05 16:26:09 -0500
+
+
+Started GET "/assets/artists.js?body=1" for 127.0.0.1 at 2013-11-05 16:26:09 -0500
+
+
+Started GET "/assets/songs.js?body=1" for 127.0.0.1 at 2013-11-05 16:26:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-05 16:26:09 -0500
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2013-11-05 16:26:21 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mArtist Load (1.8ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered songs/show.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 74ms (Views: 69.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2013-11-05 16:26:24 -0500
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered songs/_form.html.erb (10.6ms)
+  Rendered songs/edit.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2013-11-05 16:26:37 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.1ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered songs/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2013-11-05 16:26:54 -0500
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.1ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered songs/_form.html.erb (1.5ms)
+  Rendered songs/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.1ms)
