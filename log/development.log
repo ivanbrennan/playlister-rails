@@ -454,3 +454,6 @@ Processing by SongsController#edit as HTML
   Rendered songs/_form.html.erb (1.5ms)
   Rendered songs/edit.html.erb within layouts/application (2.3ms)
 Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+  [1m[36mSong Load (1.8ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  [1m[35mSong Load (0.3ms)[0m  SELECT "songs".* FROM "songs" ORDER BY "songs"."id" ASC LIMIT 1
+  [1m[36mArtist Load (2.2ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
