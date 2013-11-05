@@ -7,7 +7,7 @@
 
 <p>
   <strong>Artist Name:</strong>
-  <%= @song.artist.name %>
+  <%= link_to(@song.artist.name, @song.artist) if @song.artist %>
 </p>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |
