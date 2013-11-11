@@ -45,4 +45,11 @@ describe Song do
       end
     end
   end
+
+  context 'with validations' do
+    it 'should be invalid without a name' do
+      song = Song.new
+      expect(song).to be_invalid
+    end
+  end
 end
