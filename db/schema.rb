@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131105223345) do
+ActiveRecord::Schema.define(version: 20131111213016) do
 
   create_table "artists", force: true do |t|
     t.string   "name"
@@ -20,6 +20,22 @@ ActiveRecord::Schema.define(version: 20131105223345) do
   end
 
   create_table "genres", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mixtape_songs", force: true do |t|
+    t.integer  "song_id"
+    t.integer  "mixtape_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "mixtape_songs", ["mixtape_id"], name: "index_mixtape_songs_on_mixtape_id"
+  add_index "mixtape_songs", ["song_id"], name: "index_mixtape_songs_on_song_id"
+
+  create_table "mixtapes", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -4,8 +4,10 @@ class Song < ActiveRecord::Base
   has_many :song_genres
   has_many :genres, :through => :song_genres
 
+  has_many :mixtape_songs    
+
   validates :name, :presence => true
-  
+
   def artist_name=(artist_name)
     # Deprecated
     # self.artist = Artist.find_or_create_by_name(artist_name)

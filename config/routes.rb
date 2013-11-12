@@ -4,6 +4,10 @@ PlaylisterApp::Application.routes.draw do
   resources :artists
 
   resources :songs
+  
+  resources :mixtapes do
+    resources :songs, :controller => 'mixtapes/songs'
+  end
 
   root 'songs#index'
   

@@ -1,0 +1,21 @@
+<h1>New Mixtape</h1>
+
+<%= form_for(@mixtape) do |f| %>
+  <%= f.text_field :name %>
+
+  <%= f.fields_for :songs, Song.new do |song_form| %>
+    <%= song_form.text_field :name %>
+  <% end %>
+
+  <p>
+    <select name="mixtape[song_ids_to_add][]">
+      <% Song.all.each do |song| %>
+      <option value="<%= song.id %>"><%= song.name %></option>
+      <% end %>
+    </select>
+  </p>
+
+
+
+  <%= f.submit %>
+<% end %>

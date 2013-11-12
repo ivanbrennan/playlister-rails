@@ -1,26 +1,19 @@
 <h1>Listing songs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<ol>
+  <%# @songs.each do |s| %>
+    <% # Least Abstract %>
+    <%#= render :partial => 'song', :locals => {:song => s} %>
+    <% # A little more abstract %>
+    <%#= render 'song_li', :song => s %>
+    <%#= render s, :as => :s %>
+  <%# end %>
 
-  <tbody>
-    <% @songs.each do |song| %>
-      <tr>
-        <td><%= song.name %></td>
-        <td><%= link_to 'Show', song %></td>
-        <td><%= link_to 'Edit', edit_song_path(song) %></td>
-        <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <%#= render :collection => @songs, :partial => 'song_li' %>
+  <%= render :collection => @songs, :partial => 'song_li', :as => :song %>
+
+  <%#= render @songs %>
+</ol>
 
 <br>
 

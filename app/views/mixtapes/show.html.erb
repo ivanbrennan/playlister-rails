@@ -1,0 +1,9 @@
+<h1><%= @mixtape.name %></h1>
+
+<ol>
+  <%= render @mixtape.songs %>
+</ol>
+
+<p>
+  <%= link_to "Add a Song to This Mixtape", new_mixtape_song_path(@mixtape) %>
+</p>
