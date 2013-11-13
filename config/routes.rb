@@ -9,6 +9,11 @@ PlaylisterApp::Application.routes.draw do
     resources :songs, :controller => 'mixtapes/songs'
   end
 
+  get '/login' => 'sessions#new'
+  get '/logout' => 'sessions#destroy'
+  
+  post '/sessions' => 'sessions#create'
+
   root 'songs#index'
   
   # The priority is based upon order of creation: first created -> highest priority.

@@ -14,3 +14,9 @@ we_cant_stop = Song.create(:name => "We Can't Stop", :artist_name => "Miley Cyru
 # MixtapeSong.create(:song_id => get_lucky.id, :mixtape_id => summer_hits.id)
 MixtapeSong.create(:song => get_lucky, :mixtape => summer_hits)
 summer_hits.mixtape_songs.create(:song => we_cant_stop)
+
+dj = User.create(:email => "dj@flatironschool.com", :password => 'test', :password_confirmation => 'test')
+listener = User.create(:email => "listener@flatironschool.com", :password => 'test', :password_confirmation => 'test')
+
+UserMixtape.create(:user => dj, :mixtape => summer_hits)
+summer_hits.user_mixtapes.create(:user => listener)
