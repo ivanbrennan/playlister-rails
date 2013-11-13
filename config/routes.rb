@@ -16,6 +16,7 @@ PlaylisterApp::Application.routes.draw do
 
   root 'songs#index'
   
+  post 'user_mixtapes/:id/' => 'user_mixtapes#create', :as => :'user_mixtapes'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

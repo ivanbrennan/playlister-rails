@@ -1,9 +1,30 @@
 <h1><%= @mixtape.name %></h1>
 
 <ol>
-  <%= render @mixtape.songs %>
+  <% @mixtape.songs.each do |song| %>
+    <li><%= song.name %></li>
+  <% end %>
 </ol>
 
 <p>
   <%= link_to "Add a Song to This Mixtape", new_mixtape_song_path(@mixtape) %>
 </p>
+
+<p>
+<% if @mixtape.owner_id == current_user.id %>
+
+<% end %>
+
+<%= form_tag(user_mixtapes_path) do %>
+  <%= label_tag :email %>
+  <%= text_field_tag :email %>
+  <%= submit_tag 'Give me an email, ok' %>
+<% end %>
+</p>
+
+<% if @mixtape.users.count > 1 %>
+  Shared users:</br>
+  <% @mixtape.users.each do |user| %>
+    <%= user.email %><br>
+  <% end %>
+<% end %>

@@ -23,6 +23,7 @@ class MixtapesController < ApplicationController
 
   def show
     @mixtape = Mixtape.find(params[:id])
+    @user_mixtape = UserMixtape.new
   end
 
   private
